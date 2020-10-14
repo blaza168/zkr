@@ -36,8 +36,7 @@ if __name__ == '__main__':
 
     chance = (1 - math.pow(0.25, iterations)) * 100
     for i in range(10):
-        # a = random.randint(1, n - 1)
-        a = 2
+        a = random.randint(1, n - 1)
         if not test(a, n):
             print("False")
             exit()
