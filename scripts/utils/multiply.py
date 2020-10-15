@@ -13,3 +13,9 @@ def square_multiply(a, n, mod):
             calculation_result = pow(calculation_result, 2) % mod
 
     return calculation_result
+
+
+if __name__ == '__main__':
+    import sys
+    a, n, mod = int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3])
+    print(square_multiply(a, n, mod))
