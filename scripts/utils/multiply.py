@@ -12,7 +12,7 @@ def square_multiply(a, n, mod):
             # Only square
             calculation_result = pow(calculation_result, 2) % mod
 
-    return calculation_result
+    return int(calculation_result)
 
 
 if __name__ == '__main__':

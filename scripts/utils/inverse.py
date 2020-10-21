@@ -1,11 +1,20 @@
+if __name__ == '__main__':
+    from core_functions import phi
+    from multiply import square_multiply
+else:
+    from .core_functions import phi
+    from .multiply import square_multiply
 from math import gcd
+
+
+
+
 
 def calculate_inverse_element(a, mod):
     if gcd(a, mod) != 1:
         return None
-    for i in range(1, mod):
-        if (a * i) % mod == 1:
-            return i
+    exponent = phi(mod) - 1
+    return square_multiply(a, exponent, mod)
 
 
 if __name__ == '__main__':
