@@ -4,17 +4,14 @@ if __name__ == '__main__':
 else:
     from .core_functions import phi
     from .multiply import square_multiply
-from math import gcd
+from sympy import gcd, mod_inverse
 
 
 
 
 
 def calculate_inverse_element(a, mod):
-    if gcd(a, mod) != 1:
-        return None
-    exponent = phi(mod) - 1
-    return square_multiply(a, exponent, mod)
+    return mod_inverse(a, mod)
 
 
 if __name__ == '__main__':

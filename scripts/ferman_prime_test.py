@@ -21,7 +21,7 @@ if __name__ == '__main__':
     for i in range(10):
         a = random.randint(1, n - 1)
         if not test(a, n):
-            print("False")
+            print("\nFalse for " + str(a))
             exit()
         if verbose:
             print(str(a) + " ", end='')
