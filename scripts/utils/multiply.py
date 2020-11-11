@@ -1,10 +1,6 @@
-from sympy import *
-
 # Calculate: pow(a, n) % mod
 def square_multiply(a, n, mod):
-    a_placeholder, n_placeholder = symbols('x y')
-
-    return Mod(a_placeholder ** n_placeholder, mod).subs({a_placeholder: a, n_placeholder: n})
+    return pow(a, n, mod)
 
 
 if __name__ == '__main__':
