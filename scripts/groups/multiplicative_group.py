@@ -13,21 +13,29 @@ def get_generators(p):
 
     a = 2
     while len(found_generators) != generators_num:
-
+        is_generator = True
         for i in int_factors:
-            if pow(a, phi_p / i) == 1:
-                continue
+            if pow(a, int(phi_p / i), p) == 1:
+                is_generator = False
+                break
 
-        found_generators.append(a)
+        if is_generator:
+            found_generators.append(a)
         a += 1
 
     return found_generators
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
+#
+#     generators = get_generators(int(sys.argv[1]))
+#
+#     print("Generators: ")
+#     for i in generators:
+#         print(i, end=" ")
 
-    generators = get_generators(int(sys.argv[1]))
+generators = get_generators(13)
 
-    print("Generators: ")
-    for i in generators:
-        print(i, end=" ")
+print("Generators: ")
+for i in generators:
+    print(i, end=" ")
